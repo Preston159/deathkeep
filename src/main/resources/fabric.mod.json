@@ -1,41 +1,38 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "deathkeep",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "DeathKeep",
+	"description": "Keeps some items on death",
 	"authors": [
-		"Me!"
+		"Preston Petrie"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://ppetrie.com/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/deathkeep/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.ppetrie.deathKeep.DeathKeep"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.ppetrie.deathKeep.DeathKeepClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"deathkeep.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "deathKeep.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
-		"minecraft": "~1.20.2",
+		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
